@@ -6,8 +6,8 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Install CocoaPods
-      run: cd Mobywatel && pod install
-    - name: Build Mobywatel Archive
+      run: cd mobywatel.zip && pod install
+    - name: Build mobywatel Archive
       run: xcodebuild -workspace Mobywatel/Mobywatel.xcworkspace -scheme Mobywatel -sdk iphoneos -configuration Release -archivePath build.xcarchive archive CODE_SIGNING_ALLOWED=NO
     - name: Export Mobywatel IPA
       run: |
